@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Input from './input';
+import content from './content';
 
 class Card extends Component {
 
@@ -26,17 +27,24 @@ class Card extends Component {
             adjectiveFive: '', 
         }
 
+        
+        
         this.handleInputChange = this.handleInputChange.bind(this);
     } 
 
     handleInputChange(event) {
         this.setState({ [event.target.name]: event.target.value })
-        console.log(this.state);
     }
-
+    
+    handleFormSubmit() {
+        console.log('trying to handle form submit');
+    }
+    
+    
     render() {
 
         const inputData = [
+
             {title: 'color', state: this.state.color, name: 'color'},
             {title: 'Plural Noun', state: this.state.color, name: 'pluralNoun'},
             {title: 'Adjective', state: this.state.color, name: 'adjectiveOne'},
@@ -59,11 +67,16 @@ class Card extends Component {
         ]
 
         return (
-            <div className="card">
+            <form onSubmit={this.handleInputChange} className="card">
+                <div className="card__inputs">
             {
                 inputData.map(data => Input( (data), this.handleInputChange ))
             }
-            </div>
+            <content data={this.state}/>
+                </div>
+                <button>Generate Madlib</button>
+                <content data={this.state}/>
+            </form>
         )
     }
 }

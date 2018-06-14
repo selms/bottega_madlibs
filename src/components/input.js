@@ -9,4 +9,4 @@ const Input = ({title, state, name}, onChange) => {
     )
 }
 
-export default Input
+export default Input;
