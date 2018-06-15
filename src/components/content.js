@@ -3,13 +3,10 @@ import React, { Component } from 'react';
 class Content extends Component {
     render() {
         const data = this.props.data;
-        for(key in data) {
-            console,log(key);
-            
-        }
-        this.props.data( (object,index) => {
-            console.log(index);
-        })
+        
+        // this.props.data( (object,index) => {
+        //     console.log(index);
+        // })
         // <span{date.indexOf(data.color)}</span>
         return (
             <p>

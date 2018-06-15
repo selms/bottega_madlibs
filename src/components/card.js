@@ -87,7 +87,7 @@ class Card extends Component {
           this.state.contentVisible ? <Content data={this.state} /> : ''
         }
       </form>
-    );
+    )
   }
 }
 
