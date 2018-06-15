@@ -23,7 +23,7 @@
         top: 0;
         left: 0;
         position: absolute;
-        height: 150vh;
+        height: 110vh;
         width: 100vw;
         background-color: #444444;
     }  
@@ -37,7 +37,7 @@
         top: 0;
         left: 0;
         position: absolute;
-        height: 150vh;
+        height: 110vh;
         width: 100vw;
         background-color:  #00CB79;
     }
@@ -85,15 +85,42 @@
     // grid-template-rows: 1fr 1fr 1fr; he changed to 26px, 1fr, 1fr to number-s & s equals 'start' and e equals 'end'
     grid-template-columns: [number-s] 26px [number-e input-s] 1fr [input-e];
 
+    font-family: 'Monserrat';
+    text-align: center;
+
     &__title {
         // grid-column: 2/3;----  now we can name it:
         grid-column: input-s/imput-e;
 
+        border-top: 1px solid #B3B3B3;
+        color: #B3B3B3;
+        font-size: 12px;
+        font-weight:300;
+
+
     }
     input {
         grid-column: input-s/imput-e;
+
+        border: none;
+        font-size:15px;
+        text-align: center;
+       
+        // width: 190px;
+        // height:40px;
     }
     &__number {
         grid-column: number-s/number-e;
-    }    
+
+        background-color:  #00CB79;
+        color: white;
+        font-size: 20px;
+        line-height: 24px;
+        padding-top: 1px;
+
+        border-radius: 50%
+
+
+    }   
+    
 }
