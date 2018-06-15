@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = (title, content) => {
+const Header = () => {
     return (
         <div className="header">
              <div className="header__skew"></div>
