@@ -7,6 +7,14 @@ class Content extends Component {
         this.count = 1;
 
     }
+       
+        // because we used the 'this.count++' it made the numbers keep increasing wh
+        // when we typed in the app. this function below made it so it stopped doing that
+    
+
+    componentWillReceiveProps() {
+        this.count = 1;
+    }
 
     renderLabel(data) {
     return [
