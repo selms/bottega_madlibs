@@ -9,6 +9,14 @@
     text-align: center;
 }
 
+.gray {
+    background: #B3B3B3;
+}
+
+.green {
+    background: #00CB79;
+}
+
 .home {
     position: relative;
     
@@ -107,7 +115,7 @@
 
     &__generate {
         background-color: #00CB79;
-        @include button;
+        @include button; 
 
        
     }
@@ -124,13 +132,28 @@
 
        justify-self: center;
        margin-bottom: 84px;
+
+       font-family: 'Monserrat';
+
+       &__label {
+           height: 18px;
+           width: 18px;
+           line-height: 22px;
+           background-color: black;
+           border-radius: 50%;
+           font-size: 14px;
+           text-align: center;
+           color: white;
+        //    padding-top: 3px;
+           display: inline-block;
+           margin: 4px;
+       }
        
 
 
        p {
            line-height: 24px;
            padding: 50px 47px;
-           font-family: 'Monserrat';
            font-size: 16px;
            font-weight: 300;
        }
@@ -180,15 +203,13 @@
     }
     &__number {
         grid-column: number-s/number-e;
-
-        background-color:  #00CB79;
         color: white;
         font-size: 20px;
         line-height: 24px;
         padding-top: 1px;
         height: 26px;
         width: 26px;
-        border-radius: 50%
+        border-radius: 50%;
 
 
     }   
